@@ -1,3 +1,6 @@
 .hyperframes/artifacts/
 renders/
 audio_engine_meta.json
+.hyperframes/video-state.json
+.hyperframes/render-outputs.json
+.hyperframes/history-id
