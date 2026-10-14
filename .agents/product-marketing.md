@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v1
+**Document version:** v2
 **Last updated:** 2026-10-14
 
 > Fuentes: el ebook *The Face Card Protocol* (PDF, 12 páginas, "Digital Edition 2026") y el análisis estratégico del producto. Las citas entre comillas son textuales del ebook. Lo marcado como **[Hipótesis]** o **[Pendiente]** no sale del ebook y hay que validarlo.
@@ -41,7 +41,7 @@
 
 ## Target Audience
 **Target companies:** No aplica (B2C).
-**Decision-makers:** La propia compradora/comprador. El ebook está escrito en clave femenina ("her face", el estudio citado es en mujeres), pero el análisis apunta a ambos géneros. **[Pendiente]** decidir si se comunica primero a mujeres y luego se abre a hombres (el mewing y la mandíbula tienen tirón en audiencia masculina).
+**Decision-makers:** **Mujeres.** La compradora es la usuaria. Todo el copy, los anuncios y la página de venta se escriben en femenino.
 **Primary use case:** Quiere mejorar su rutina facial pero no sabe qué hacer, en qué orden ni cómo mantenerlo.
 **Jobs to be done:**
 - Deshinchar la cara por la mañana y verse con el rostro más definido.
@@ -57,7 +57,7 @@
 **Canales donde vive la audiencia:** TikTok e Instagram Reels.
 
 ## Personas
-B2C, sin comité de compra. Una persona principal: consumidora de contenido de belleza en redes, 18–35 años **[Hipótesis]**, que ya probó consejos sueltos y quiere un sistema.
+B2C, sin comité de compra. Una persona principal: mujer que consume contenido de belleza en TikTok e Instagram, 18–35 años **[Hipótesis de edad]**, que ya probó consejos sueltos y quiere un sistema.
 
 ## Problems & Pain Points
 **Core problem:** "Quiero mejorar mi rutina facial, pero no sé qué hacer, en qué orden ni cómo mantenerlo."
@@ -165,18 +165,41 @@ B2C, sin comité de compra. Una persona principal: consumidora de contenido de b
 - El antes/después es un caso individual; en anuncios acompañar con "results vary" / "los resultados pueden variar". Meta y TikTok restringen los antes/después en belleza.
 
 ## Goals
-**Business goal:** [Pendiente] Validar el producto en el rango US$7,99–9,99 y lanzar versión en español.
-**Conversion action:** Compra del ebook desde TikTok/Instagram (link en bio → página de venta). **[Pendiente]** confirmar plataforma de venta.
+**Business goal:** Validar el producto en Hotmart en el rango US$7,99–9,99 y lanzar versión en español (Hotmart tiene mucho público hispanohablante en Latinoamérica).
+**Conversion action:** Compra del ebook en **Hotmart** desde TikTok/Instagram (link en bio → página de venta → checkout de Hotmart). Hotmart permite garantía de reembolso (mínimo 7 días), order bumps, upsells y programa de afiliadas.
 **Current metrics:** [Pendiente] Sin datos de ventas aún.
 
 ## Notas de producto (para la siguiente edición del ebook)
-- El ebook anuncia "the 12 essential exercises" de face yoga, pero solo muestra 5. Hay que añadir los 7 que faltan o cambiar el texto.
-- El encabezado de Phase Two repite el subtítulo de Phase One ("Your face isn't bloated because of genetics…"). Reescribir.
+**Errores que corregir:**
+- Anuncia "the 12 essential exercises" de face yoga, pero solo muestra 5.
+- El encabezado de Phase Two repite el subtítulo de Phase One.
 - Errata en el plan: "irst retinol" → "First retinol".
-- Las fases se solapan (semanas 1–2, 2–3, 3–4) y el plan final usa 4 bloques (días 1–7, 8–14, 15–21, 22–30). Unificar.
-- Faltan aviso legal/sanitario y fuentes.
-- Ideas para subir el valor percibido: checklist imprimible, tracker de 30 días, plantilla de fotos antes/después, versión en español.
+- Las fases (semanas 1–2, 2–3, 3–4) no coinciden con los 4 bloques del plan (días 1–7, 8–14, 15–21, 22–30).
+- "3.400 Mg" → "3.400 mg"; la barra de sodio confunde "ideal goal" y "daily limit".
+- La página de la rutina PM queda casi vacía.
+
+**Contenido prometido que no está desarrollado:**
+- "Cold therapy and lymphatic drainage at home" aparece en el índice y en el plan ("Daily cold therapy"), pero no tiene página.
+- "Lemon water first thing in the morning" aparece en el plan sin explicación.
+- El mal sueño se nombra como causa de hinchazón, pero no hay consejos de sueño.
+
+**Seguridad (falta y es importante):**
+- Aviso legal: no sustituye consejo médico; los resultados varían.
+- Retinol: no usar en embarazo ni lactancia (alternativa: bakuchiol); prueba de parche; introducción gradual; posible irritación.
+- Gua sha: no sobre acné activo, heridas o rosácea inflamada.
+- Mewing y ejercicios de mandíbula: parar si hay dolor de mandíbula (ATM).
+- Página de fuentes para el estudio de face yoga, la AHA y los ingredientes.
+
+**Para subir el valor percibido:**
+- Plan día por día (30 días) en lugar de bloques semanales, con tracker imprimible.
+- Guía para hacer la foto de antes y después (misma luz, ángulo, hora y expresión).
+- Rutinas por tipo de piel (grasa, seca, sensible, con acné).
+- Preguntas frecuentes ("¿y si me salto un día?", "no veo cambios").
+- Página final: bio de la autora, próximos pasos y hashtag propio para "Share your transformation".
+- Versión en español, adaptando la jerga ("fr", "no cap", "lowkey").
+- Bonos para Hotmart: tracker imprimible, vídeo del gua sha, versión en español, lista de compras.
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v2 (2026-10-14) — Público confirmado: mujeres. Plataforma de venta confirmada: Hotmart. Ampliadas las notas de mejora del ebook.
 - v1 (2026-10-14) — Initial context, extraída del ebook The Face Card Protocol (PDF) y del análisis estratégico.
