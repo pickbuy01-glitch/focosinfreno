@@ -18,21 +18,21 @@
 **Time:** 4.5 – 12.5s
 **Delivery:** Demonstrative, even pace; slow down on the last sentence.
 
-    Push your head forward and the line from chin to neck softens. Stack it back over your shoulders, and the same face reads sharper. That's position, not new bone.
+    Push your head forward and the chin-to-neck line softens. Stack it over your shoulders, and the same face reads sharper. Position, not new bone.
 
 ## Line 3 — The mechanics (Frame 3)
 
 **Time:** 12.5 – 21.5s
 **Delivery:** Explanatory; name each system as its label appears.
 
-    Your profile is three systems: head position, mandibular structure, and the muscles of mastication. Studies link posture with facial shape. But a link is not a cause.
+    Your profile is three systems: head position, jaw structure, and the chewing muscles. Studies link posture with facial shape. But a link isn't a cause.
 
 ## Line 4 — Chewing (Frame 4)
 
 **Time:** 21.5 – 28.5s
 **Delivery:** Measured, factual.
 
-    Chewing is a mechanical stimulus. During growth, that load helps shape the jaw, and populations with softer diets tend to have smaller jaws.
+    Chewing is a mechanical stimulus. During growth, that load helps shape the jaw. Populations with softer diets tend to have smaller jaws.
 
 ## Line 5 — The caveat (Frame 5)
 

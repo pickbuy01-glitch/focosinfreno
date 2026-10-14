@@ -1,0 +1,37 @@
+{
+  "provider": "auto",
+  "speed": "1.12",
+  "lines": [
+    {
+      "id": "01",
+      "text": "Can posture, and the food you chew, change your jawline? It's more than genetics."
+    },
+    {
+      "id": "02",
+      "text": "Push your head forward and the line from chin to neck softens. Stack it back over your shoulders, and the same face reads sharper. That's position, not new bone."
+    },
+    {
+      "id": "03",
+      "text": "Your profile is three systems: head position, mandibular structure, and the muscles of mastication. Studies link posture with facial shape. But a link is not a cause."
+    },
+    {
+      "id": "04",
+      "text": "Chewing is a mechanical stimulus. During growth, that load helps shape the jaw, and populations with softer diets tend to have smaller jaws."
+    },
+    {
+      "id": "05",
+      "text": "But harder doesn't mean better. In adults, chewing trains muscle. It doesn't redraw bone."
+    },
+    {
+      "id": "06",
+      "text": "Posture. Function. Genetics. Understand the structure. Don't chase myths."
+    }
+  ],
+  "bgm": {
+    "mode": "retrieve",
+    "query": "dark minimal ambient, low drone, controlled tension (host-synthesized)",
+    "blob": "Your jawline is more than genetics — posture changes how the profile looks, chewing matters most during growth, bone has many causes. Understand the structure, don't chase myths.",
+    "arc": "Hook → Posture (appearance) → Mechanics (three systems) → Chewing (growth) → Caveat (adults) → Takeaway"
+  },
+  "voice": "am_michael"
+}

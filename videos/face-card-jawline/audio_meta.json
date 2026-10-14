@@ -1,0 +1,589 @@
+{
+  "bgm": null,
+  "bgm_pending": false,
+  "voices": [
+    {
+      "frame": 1,
+      "path": "assets/voice/01.wav",
+      "duration_s": 5.17,
+      "words": [
+        {
+          "text": "Can",
+          "start": 0.06,
+          "end": 0.355
+        },
+        {
+          "text": "posture,",
+          "start": 0.355,
+          "end": 0.913
+        },
+        {
+          "text": "and",
+          "start": 0.983,
+          "end": 1.18
+        },
+        {
+          "text": "the",
+          "start": 1.18,
+          "end": 1.377
+        },
+        {
+          "text": "food",
+          "start": 1.377,
+          "end": 1.618
+        },
+        {
+          "text": "you",
+          "start": 1.618,
+          "end": 1.815
+        },
+        {
+          "text": "chew,",
+          "start": 1.815,
+          "end": 2.056
+        },
+        {
+          "text": "change",
+          "start": 2.126,
+          "end": 2.51
+        },
+        {
+          "text": "your",
+          "start": 2.51,
+          "end": 2.792
+        },
+        {
+          "text": "jawline?",
+          "start": 2.792,
+          "end": 3.228
+        },
+        {
+          "text": "It's",
+          "start": 3.468,
+          "end": 3.748
+        },
+        {
+          "text": "more",
+          "start": 3.748,
+          "end": 4.027
+        },
+        {
+          "text": "than",
+          "start": 4.027,
+          "end": 4.307
+        },
+        {
+          "text": "genetics.",
+          "start": 4.307,
+          "end": 4.79
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "path": "assets/voice/02.wav",
+      "duration_s": 8.502,
+      "words": [
+        {
+          "text": "Push",
+          "start": 0.06,
+          "end": 0.337
+        },
+        {
+          "text": "your",
+          "start": 0.337,
+          "end": 0.614
+        },
+        {
+          "text": "head",
+          "start": 0.614,
+          "end": 0.891
+        },
+        {
+          "text": "forward",
+          "start": 0.891,
+          "end": 1.319
+        },
+        {
+          "text": "and",
+          "start": 1.319,
+          "end": 1.545
+        },
+        {
+          "text": "the",
+          "start": 1.545,
+          "end": 1.772
+        },
+        {
+          "text": "chin-to-neck",
+          "start": 1.772,
+          "end": 2.351
+        },
+        {
+          "text": "line",
+          "start": 2.351,
+          "end": 2.628
+        },
+        {
+          "text": "softens.",
+          "start": 2.628,
+          "end": 3.056
+        },
+        {
+          "text": "Stack",
+          "start": 3.256,
+          "end": 3.54
+        },
+        {
+          "text": "it",
+          "start": 3.54,
+          "end": 3.693
+        },
+        {
+          "text": "over",
+          "start": 3.693,
+          "end": 3.934
+        },
+        {
+          "text": "your",
+          "start": 3.934,
+          "end": 4.175
+        },
+        {
+          "text": "shoulders,",
+          "start": 4.175,
+          "end": 4.634
+        },
+        {
+          "text": "and",
+          "start": 4.704,
+          "end": 4.921
+        },
+        {
+          "text": "the",
+          "start": 4.921,
+          "end": 5.138
+        },
+        {
+          "text": "same",
+          "start": 5.138,
+          "end": 5.403
+        },
+        {
+          "text": "face",
+          "start": 5.403,
+          "end": 5.667
+        },
+        {
+          "text": "reads",
+          "start": 5.667,
+          "end": 5.981
+        },
+        {
+          "text": "sharper.",
+          "start": 5.981,
+          "end": 6.39
+        },
+        {
+          "text": "Position,",
+          "start": 6.59,
+          "end": 7.211
+        },
+        {
+          "text": "not",
+          "start": 7.281,
+          "end": 7.542
+        },
+        {
+          "text": "new",
+          "start": 7.542,
+          "end": 7.803
+        },
+        {
+          "text": "bone.",
+          "start": 7.803,
+          "end": 8.122
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "path": "assets/voice/03.wav",
+      "duration_s": 8.982,
+      "words": [
+        {
+          "text": "Your",
+          "start": 0.06,
+          "end": 0.353
+        },
+        {
+          "text": "profile",
+          "start": 0.353,
+          "end": 0.805
+        },
+        {
+          "text": "is",
+          "start": 0.805,
+          "end": 0.991
+        },
+        {
+          "text": "three",
+          "start": 0.991,
+          "end": 1.337
+        },
+        {
+          "text": "systems:",
+          "start": 1.337,
+          "end": 1.79
+        },
+        {
+          "text": "head",
+          "start": 1.91,
+          "end": 2.211
+        },
+        {
+          "text": "position,",
+          "start": 2.211,
+          "end": 2.73
+        },
+        {
+          "text": "jaw",
+          "start": 2.8,
+          "end": 3.073
+        },
+        {
+          "text": "structure,",
+          "start": 3.073,
+          "end": 3.708
+        },
+        {
+          "text": "and",
+          "start": 3.778,
+          "end": 3.983
+        },
+        {
+          "text": "the",
+          "start": 3.983,
+          "end": 4.188
+        },
+        {
+          "text": "chewing",
+          "start": 4.188,
+          "end": 4.575
+        },
+        {
+          "text": "muscles.",
+          "start": 4.575,
+          "end": 4.962
+        },
+        {
+          "text": "Studies",
+          "start": 5.162,
+          "end": 5.531
+        },
+        {
+          "text": "link",
+          "start": 5.531,
+          "end": 5.771
+        },
+        {
+          "text": "posture",
+          "start": 5.771,
+          "end": 6.14
+        },
+        {
+          "text": "with",
+          "start": 6.14,
+          "end": 6.379
+        },
+        {
+          "text": "facial",
+          "start": 6.379,
+          "end": 6.705
+        },
+        {
+          "text": "shape.",
+          "start": 6.705,
+          "end": 6.988
+        },
+        {
+          "text": "But",
+          "start": 7.188,
+          "end": 7.415
+        },
+        {
+          "text": "a",
+          "start": 7.415,
+          "end": 7.541
+        },
+        {
+          "text": "link",
+          "start": 7.541,
+          "end": 7.819
+        },
+        {
+          "text": "isn't",
+          "start": 7.819,
+          "end": 8.147
+        },
+        {
+          "text": "a",
+          "start": 8.147,
+          "end": 8.273
+        },
+        {
+          "text": "cause.",
+          "start": 8.273,
+          "end": 8.602
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "path": "assets/voice/04.wav",
+      "duration_s": 8.57,
+      "words": [
+        {
+          "text": "Chewing",
+          "start": 0.06,
+          "end": 0.521
+        },
+        {
+          "text": "is",
+          "start": 0.521,
+          "end": 0.711
+        },
+        {
+          "text": "a",
+          "start": 0.711,
+          "end": 0.847
+        },
+        {
+          "text": "mechanical",
+          "start": 0.847,
+          "end": 1.471
+        },
+        {
+          "text": "stimulus.",
+          "start": 1.471,
+          "end": 1.987
+        },
+        {
+          "text": "During",
+          "start": 2.187,
+          "end": 2.593
+        },
+        {
+          "text": "growth,",
+          "start": 2.593,
+          "end": 2.999
+        },
+        {
+          "text": "that",
+          "start": 3.069,
+          "end": 3.316
+        },
+        {
+          "text": "load",
+          "start": 3.316,
+          "end": 3.564
+        },
+        {
+          "text": "helps",
+          "start": 3.564,
+          "end": 3.856
+        },
+        {
+          "text": "shape",
+          "start": 3.856,
+          "end": 4.149
+        },
+        {
+          "text": "the",
+          "start": 4.149,
+          "end": 4.351
+        },
+        {
+          "text": "jaw.",
+          "start": 4.351,
+          "end": 4.554
+        },
+        {
+          "text": "Populations",
+          "start": 4.754,
+          "end": 5.464
+        },
+        {
+          "text": "with",
+          "start": 5.464,
+          "end": 5.776
+        },
+        {
+          "text": "softer",
+          "start": 5.776,
+          "end": 6.202
+        },
+        {
+          "text": "diets",
+          "start": 6.202,
+          "end": 6.571
+        },
+        {
+          "text": "tend",
+          "start": 6.571,
+          "end": 6.884
+        },
+        {
+          "text": "to",
+          "start": 6.884,
+          "end": 7.083
+        },
+        {
+          "text": "have",
+          "start": 7.083,
+          "end": 7.395
+        },
+        {
+          "text": "smaller",
+          "start": 7.395,
+          "end": 7.878
+        },
+        {
+          "text": "jaws.",
+          "start": 7.878,
+          "end": 8.19
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "path": "assets/voice/05.wav",
+      "duration_s": 5.526,
+      "words": [
+        {
+          "text": "But",
+          "start": 0.06,
+          "end": 0.253
+        },
+        {
+          "text": "harder",
+          "start": 0.253,
+          "end": 0.575
+        },
+        {
+          "text": "doesn't",
+          "start": 0.575,
+          "end": 0.94
+        },
+        {
+          "text": "mean",
+          "start": 0.94,
+          "end": 1.177
+        },
+        {
+          "text": "better.",
+          "start": 1.177,
+          "end": 1.499
+        },
+        {
+          "text": "In",
+          "start": 1.699,
+          "end": 1.934
+        },
+        {
+          "text": "adults,",
+          "start": 1.934,
+          "end": 2.437
+        },
+        {
+          "text": "chewing",
+          "start": 2.507,
+          "end": 2.94
+        },
+        {
+          "text": "trains",
+          "start": 2.94,
+          "end": 3.322
+        },
+        {
+          "text": "muscle.",
+          "start": 3.322,
+          "end": 3.704
+        },
+        {
+          "text": "It",
+          "start": 3.904,
+          "end": 4.078
+        },
+        {
+          "text": "doesn't",
+          "start": 4.078,
+          "end": 4.5
+        },
+        {
+          "text": "redraw",
+          "start": 4.5,
+          "end": 4.872
+        },
+        {
+          "text": "bone.",
+          "start": 4.872,
+          "end": 5.146
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "path": "assets/voice/06.wav",
+      "duration_s": 5.509,
+      "words": [
+        {
+          "text": "Posture.",
+          "start": 0.06,
+          "end": 0.691
+        },
+        {
+          "text": "Function.",
+          "start": 0.891,
+          "end": 1.521
+        },
+        {
+          "text": "Genetics.",
+          "start": 1.721,
+          "end": 2.44
+        },
+        {
+          "text": "Understand",
+          "start": 2.64,
+          "end": 3.181
+        },
+        {
+          "text": "the",
+          "start": 3.181,
+          "end": 3.392
+        },
+        {
+          "text": "structure.",
+          "start": 3.392,
+          "end": 3.886
+        },
+        {
+          "text": "Don't",
+          "start": 4.086,
+          "end": 4.434
+        },
+        {
+          "text": "chase",
+          "start": 4.434,
+          "end": 4.782
+        },
+        {
+          "text": "myths.",
+          "start": 4.782,
+          "end": 5.129
+        }
+      ]
+    }
+  ],
+  "sfx": []
+}

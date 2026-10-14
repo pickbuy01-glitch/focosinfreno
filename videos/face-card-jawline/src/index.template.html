@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>The Face Card Protocol — Your Jawline Is More Than Genetics</title>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Instrument Serif"; font-style: normal; font-weight: 400; src: url("assets/fonts/instrument-serif-latin-400-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Instrument Serif"; font-style: italic; font-weight: 400; src: url("assets/fonts/instrument-serif-latin-400-italic.woff2") format("woff2"); }
+      @font-face { font-family: "JetBrains Mono"; font-weight: 400; src: url("assets/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+      @font-face { font-family: "JetBrains Mono"; font-weight: 500; src: url("assets/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Inter"; font-weight: 400; src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Inter"; font-weight: 500; src: url("assets/fonts/inter-latin-500-normal.woff2") format("woff2"); }
+
+      :root {
+        --charcoal: #292929;
+        --charcoal-2: #333330;
+        --cream: #f5f1e8;
+        --cream-2: #e9e3d3;
+        --olive: #465a25;
+        --olive-text: #9aae5f; /* olive lifted for legibility on charcoal */
+        --sage: #c7d1af;
+        --terracotta: #a95a32;
+        --salmon: #e5b6a6;
+      }
+      html, body { margin: 0; background: var(--charcoal); }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--charcoal); font-family: Inter, sans-serif; }
+      .clip { position: absolute; inset: 0; }
+
+      /* ground */
+      .ground { background: radial-gradient(120% 70% at 50% 38%, #383834 0%, var(--charcoal) 55%, #222221 100%); }
+      .numeral { position: absolute; right: 40px; top: 1010px; font-family: "Instrument Serif"; font-size: 560px; line-height: 1; color: var(--cream); opacity: 0.045; letter-spacing: -0.04em; }
+
+      /* stage: line portrait + 3D jaw share one camera */
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 540px 1260px; }
+      #stage svg, #stage canvas { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .draw { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+      /* chrome */
+      .chapter { position: absolute; top: 128px; left: 0; right: 0; display: flex; justify-content: center; }
+      .pill { display: inline-flex; align-items: center; gap: 14px; padding: 12px 24px; border: 1.5px solid rgba(199, 209, 175, 0.35); border-radius: 999px; font-family: "JetBrains Mono"; font-weight: 500; font-size: 22px; letter-spacing: 0.18em; color: var(--sage); text-transform: uppercase; background: rgba(41, 41, 41, 0.55); white-space: nowrap; }
+      .pill .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--olive-text); }
+
+      /* headlines */
+      .headline { position: absolute; top: 236px; left: 70px; right: 70px; text-align: center; font-family: "Instrument Serif"; font-size: 112px; line-height: 0.96; color: var(--cream); text-transform: uppercase; letter-spacing: -0.005em; }
+      .headline .w { display: inline-block; margin: 0 0.12em; }
+      .headline .em { font-style: italic; color: var(--olive-text); text-transform: uppercase; }
+      .headline.dark { color: var(--charcoal); }
+      .headline.dark .em { color: var(--olive); }
+      .sub { position: absolute; left: 90px; right: 90px; text-align: center; font-family: "JetBrains Mono"; font-weight: 500; font-size: 22px; letter-spacing: 0.2em; color: var(--sage); text-transform: uppercase; }
+
+      /* labels on the anatomy */
+      .tag { position: absolute; display: inline-flex; align-items: center; gap: 12px; padding: 10px 18px; border-radius: 999px; font-family: "JetBrains Mono"; font-weight: 500; font-size: 21px; letter-spacing: 0.16em; color: var(--cream); background: rgba(41, 41, 41, 0.82); border: 1.5px solid rgba(154, 174, 95, 0.7); white-space: nowrap; }
+      .tag .num { color: var(--olive-text); }
+      .tag .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--olive-text); }
+
+      /* food tiles */
+      .tiles { position: absolute; top: 560px; left: 110px; right: 110px; display: flex; gap: 40px; justify-content: center; }
+      .tile { width: 400px; height: 400px; border: 1.5px solid rgba(245, 241, 232, 0.25); border-radius: 8px; background: rgba(41, 41, 41, 0.9); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; }
+      .tile svg { width: 230px; height: 200px; }
+      .tile .lbl { font-family: "JetBrains Mono"; font-weight: 500; font-size: 22px; letter-spacing: 0.2em; color: var(--sage); }
+
+      /* cream panel (the turn) */
+      .panel { position: absolute; inset: 0; background: var(--cream); }
+      .cols { position: absolute; top: 720px; left: 90px; right: 90px; display: flex; gap: 44px; }
+      .col { flex: 1; border-top: 2px solid var(--charcoal); padding-top: 34px; }
+      .col .k { font-family: "JetBrains Mono"; font-weight: 500; font-size: 21px; letter-spacing: 0.18em; color: rgba(41, 41, 41, 0.65); }
+      .col .v { font-family: "Instrument Serif"; font-size: 84px; line-height: 0.95; color: var(--charcoal); margin-top: 18px; text-transform: uppercase; }
+      .col .v.em { font-style: italic; color: var(--olive); }
+      .col svg { width: 100%; height: 300px; margin-top: 36px; }
+      .col .note { font-family: Inter; font-size: 28px; line-height: 1.35; color: rgba(41, 41, 41, 0.75); margin-top: 22px; }
+
+      /* captions */
+      .caption { position: absolute; left: 80px; right: 80px; top: 1505px; text-align: center; font-family: Inter; font-weight: 500; font-size: 40px; line-height: 1.3; color: var(--cream); }
+      .caption .cw { opacity: 0.38; }
+      .caption.dark { color: var(--charcoal); }
+
+      /* lockup */
+      .lockup { position: absolute; left: 0; right: 0; top: 760px; display: flex; flex-direction: column; align-items: center; gap: 26px; }
+      .lockup .rule { width: 520px; height: 1.5px; background: rgba(199, 209, 175, 0.5); }
+      .lockup .mark { width: 120px; height: 120px; border-radius: 50%; border: 2px solid var(--olive-text); display: flex; align-items: center; justify-content: center; font-family: "Instrument Serif"; font-style: italic; font-size: 54px; color: var(--cream); }
+      .lockup .word { font-family: "Instrument Serif"; font-size: 96px; line-height: 0.95; color: var(--cream); text-align: center; text-transform: uppercase; }
+      .lockup .word .em { font-style: italic; color: var(--olive-text); }
+      .lockup .by { font-family: "JetBrains Mono"; font-weight: 500; font-size: 24px; letter-spacing: 0.3em; color: var(--sage); text-transform: uppercase; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="__TOTAL__">
+      <div id="ground" class="clip ground" data-start="0" data-duration="__TOTAL__" data-track-index="0">
+        <div id="numeral" class="numeral">01</div>
+      </div>
+
+      <div id="stage-clip" class="clip" data-start="0" data-duration="__TOTAL__" data-track-index="1">
+        <div id="stage">
+          <canvas id="jaw3d" width="1620" height="2880"></canvas>
+          <svg id="portrait" viewBox="0 0 1080 1920">
+            <defs>
+              <linearGradient id="rim" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0" stop-color="#f5f1e8" stop-opacity="0" />
+                <stop offset="1" stop-color="#f5f1e8" stop-opacity="0.07" />
+              </linearGradient>
+            </defs>
+            <rect id="rimlight" x="540" y="0" width="540" height="1920" fill="url(#rim)" />
+            <g id="vertebrae" opacity="0"></g>
+            <g id="ghost" opacity="0">
+              <path id="ghost-front" class="draw" stroke="#c7d1af" stroke-width="2.5" stroke-dasharray="6 12" />
+              <path id="ghost-back" class="draw" stroke="#c7d1af" stroke-width="2.5" stroke-dasharray="6 12" />
+            </g>
+            <g id="head" stroke="#f5f1e8" stroke-width="3.2">
+              <path id="h-front" class="draw" pathLength="1" />
+              <path id="h-back" class="draw" pathLength="1" />
+              <path id="h-ear" class="draw" pathLength="1" stroke-width="2.6" />
+              <path id="h-brow" class="draw" pathLength="1" stroke-width="2.4" />
+              <path id="h-eye" class="draw" pathLength="1" stroke-width="2.4" />
+              <path id="h-nostril" class="draw" pathLength="1" stroke-width="2.4" />
+              <path id="h-mouth" class="draw" pathLength="1" stroke-width="2.4" />
+            </g>
+            <path id="olive-profile" class="draw" pathLength="1" stroke="#9aae5f" stroke-width="5" />
+            <g id="masseter" opacity="0">
+              <path id="masseter-body" fill="#a95a32" fill-opacity="0.32" stroke="#e5b6a6" stroke-width="2.5" />
+              <g id="masseter-fibers" stroke="#e5b6a6" stroke-width="1.6" stroke-opacity="0.75" fill="none"></g>
+            </g>
+            <g id="load" opacity="0" stroke="#e5b6a6" stroke-width="3" fill="none" stroke-linecap="round"></g>
+            <g id="analysis" fill="none" stroke-linecap="round">
+              <path id="a-border" class="draw" pathLength="1" stroke="#9aae5f" stroke-width="4.5" />
+              <path id="a-ramus" class="draw" pathLength="1" stroke="#9aae5f" stroke-width="4.5" />
+              <path id="a-arc" class="draw" pathLength="1" stroke="#c7d1af" stroke-width="2.5" stroke-dasharray="0.02 0.03" />
+            </g>
+            <g id="plumb" opacity="0" fill="none" stroke-linecap="round">
+              <line id="plumb-line" stroke="#9aae5f" stroke-width="2.5" stroke-dasharray="4 14" />
+              <line id="shoulder-line" stroke="#c7d1af" stroke-width="2" stroke-opacity="0.6" />
+              <circle id="chin-marker" r="40" stroke="#c7d1af" stroke-width="2.5" stroke-dasharray="3 10" />
+              <circle id="ear-dot" r="8" fill="#9aae5f" stroke="none" />
+            </g>
+            <g id="frame6" opacity="0" fill="none" stroke="#9aae5f" stroke-width="3"></g>
+            <circle id="jaw-ring" r="120" fill="none" stroke="#c7d1af" stroke-width="2.5" stroke-dasharray="3 12" opacity="0" />
+          </svg>
+          <div id="t-head" class="tag" style="opacity:0"><span class="num">01</span> HEAD POSITION</div>
+          <div id="t-mand" class="tag" style="opacity:0"><span class="num">02</span> MANDIBULAR STRUCTURE</div>
+          <div id="t-mast" class="tag" style="opacity:0"><span class="num">03</span> MASTICATION</div>
+          <div id="t-forward" class="tag" style="opacity:0"><span class="dot"></span> FORWARD HEAD</div>
+          <div id="t-neutral" class="tag" style="opacity:0"><span class="dot"></span> NEUTRAL</div>
+          <div id="t-posture" class="tag" style="opacity:0"><span class="dot"></span> POSTURE</div>
+          <div id="t-function" class="tag" style="opacity:0"><span class="dot"></span> FUNCTION</div>
+          <div id="t-genetics" class="tag" style="opacity:0"><span class="dot"></span> GENETICS</div>
+        </div>
+      </div>
+
+      <div id="chrome" class="clip" data-start="0" data-duration="__TOTAL__" data-track-index="2">
+        <div class="chapter"><div class="pill"><span class="dot"></span><span id="chapter-text">01 — The hook</span></div></div>
+      </div>
+
+      <section id="f1" class="clip" data-start="__F1S__" data-duration="__F1D__" data-track-index="3">
+        <div class="headline" id="hl1"><span class="w">Your</span><span class="w">jawline</span><span class="w">is</span><span class="w">more</span><span class="w">than</span><span class="w em">genetics.</span></div>
+      </section>
+
+      <section id="f2" class="clip" data-start="__F2S__" data-duration="__F2D__" data-track-index="3">
+        <div class="headline" id="hl2"><span class="w">Head</span><span class="w">position</span><span class="w">changes</span><span class="w">your</span><span class="w em">profile.</span></div>
+        <div class="sub" id="sub2" style="top: 1432px">Same anatomy · different position</div>
+      </section>
+
+      <section id="f3" class="clip" data-start="__F3S__" data-duration="__F3D__" data-track-index="3">
+        <div class="headline" id="hl3"><span class="w">One</span><span class="w">profile.</span><span class="w em">Three</span><span class="w em">systems.</span></div>
+        <div class="sub" id="sub3" style="top: 520px">Linked ≠ caused</div>
+      </section>
+
+      <section id="f4" class="clip" data-start="__F4S__" data-duration="__F4D__" data-track-index="3">
+        <div class="headline" id="hl4"><span class="w">Mastication</span><span class="w">is</span><span class="w">a</span><span class="w em">mechanical</span><span class="w em">stimulus.</span></div>
+        <div class="tiles" id="tiles">
+          <div class="tile" id="tile-soft">
+            <svg viewBox="0 0 230 200" fill="none" stroke="#f5f1e8" stroke-width="3" stroke-linecap="round">
+              <path d="M30 100 Q115 112 200 100" />
+              <path d="M30 100 Q38 168 115 172 Q192 168 200 100" />
+              <path d="M70 96 Q90 70 115 84 Q140 98 160 78" stroke="#c7d1af" />
+              <path d="M88 186 L142 186" stroke-opacity="0.5" />
+            </svg>
+            <div class="lbl">SOFT</div>
+          </div>
+          <div class="tile" id="tile-firm">
+            <svg viewBox="0 0 230 200" fill="none" stroke="#f5f1e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M40 160 L150 60 Q168 48 178 62 Q186 76 172 88 Z" />
+              <path d="M95 108 L104 118 M118 90 L127 100 M140 72 L148 80" stroke-opacity="0.6" />
+              <path d="M174 58 Q186 30 206 26 M178 62 Q204 52 214 66 M170 56 Q168 30 182 16" stroke="#c7d1af" />
+              <ellipse cx="66" cy="70" rx="26" ry="17" transform="rotate(-25 66 70)" />
+              <path d="M48 76 Q66 64 86 64" stroke-opacity="0.6" />
+            </svg>
+            <div class="lbl">FIRM</div>
+          </div>
+        </div>
+        <div class="tag" id="t-growth" style="left: 0; right: 0; margin: 0 auto; width: max-content; top: 650px; opacity: 0"><span class="dot"></span> DURING GROWTH</div>
+        <div class="sub" id="sub4" style="top: 730px; opacity: 0">Population trend · not a guarantee</div>
+      </section>
+
+      <section id="f5" class="clip" data-start="__F5S__" data-duration="__F5D__" data-track-index="4">
+        <div class="panel" id="panel"></div>
+        <div class="headline dark" id="hl5"><span class="w">But</span><span class="w">harder</span><span class="w">doesn't</span><span class="w">mean</span><span class="w em">better.</span></div>
+        <div class="cols">
+          <div class="col" id="col-a">
+            <div class="k">ADULT MUSCLE</div>
+            <div class="v em">Adapts</div>
+            <svg viewBox="0 0 420 300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M110 40 L250 34 C290 120 300 200 290 262 L160 282 C140 200 120 120 110 40 Z" fill="#a95a32" fill-opacity="0.35" stroke="#a95a32" stroke-width="3" />
+              <path d="M140 60 L190 270 M175 50 L220 266 M210 44 L255 262 M240 40 L278 250" stroke="#a95a32" stroke-width="2" stroke-opacity="0.7" />
+            </svg>
+            <div class="note">Use can change muscle — size, tone, endurance.</div>
+          </div>
+          <div class="col" id="col-b">
+            <div class="k">ADULT BONE</div>
+            <div class="v">Not redrawn</div>
+            <svg viewBox="0 0 420 300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M60 206 Q56 238 84 242 L300 222 Q332 214 338 176 L340 72 Q342 52 326 50 Q314 52 314 68 L308 112 Q298 94 286 94 Q270 98 266 122 L262 174 L120 188 L86 190 Q64 192 60 206 Z" stroke="#292929" stroke-width="3" /><path d="M120 186 Q126 172 134 186 Q142 172 150 185 Q158 171 166 184 Q174 170 182 183 Q190 169 198 182 Q206 168 214 181 Q222 167 230 180" stroke="#292929" stroke-width="2" />
+              <path d="M40 120 L380 120" stroke="#292929" stroke-width="2" stroke-dasharray="4 10" stroke-opacity="0.5" />
+            </svg>
+            <div class="note">Hard food won't reshape a grown jaw.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="f6" class="clip" data-start="__F6S__" data-duration="__F6D__" data-track-index="3">
+        <div class="headline" id="hl6"><span class="w">Understand</span><span class="w">the</span><span class="w">structure.</span><span class="w em">Don't</span><span class="w em">chase</span><span class="w em">myths.</span></div>
+        <div class="lockup" id="lockup" style="opacity: 0">
+          <div class="mark">FC</div>
+          <div class="rule"></div>
+          <div class="word">The Face Card<br />Protocol</div>
+          <div class="rule"></div>
+          <div class="by">by Val Saint</div>
+        </div>
+      </section>
+
+      <div id="captions" class="clip" data-start="0" data-duration="__TOTAL__" data-track-index="5">
+        <div class="caption" id="caption"></div>
+      </div>
+
+__AUDIO__
+    </div>
+
+    <script>
+      window.TIMING = __TIMING__;
+    </script>
+    <script>
+      (function () {
+        const T = window.TIMING;
+        const F = T.frames; // [{start, duration, words:[{text,start,end}]}]
+        const K = 1.4, OX = 82, OY = 560; // face-local → stage px
+        const PIVOT = [420, 400]; // ear canal, face-local
+        const FWD = { dx: -75, dy: 18, rot: 6 }; // forward-head pose (degrees, clockwise = chin up)
+
+        // ---------- face geometry (face-local, facing left) ----------
+        const FRONT = [[330,60,1],[250,75,1],[195,125,1],[168,200,1],[152,275,1],[163,312,1],[128,365,1],[98,408,1],[112,428,1],[140,438,1],[130,468,1],[146,489,1],[134,510,1],[156,540,1],[146,580,1],[172,616,1],[215,630,1],[255,640,0.9],[262,680,0.6],[270,740,0.3],[276,800,0.1],[282,880,0],[286,960,0]];
+        const BACK = [[330,60,1],[430,85,1],[510,150,1],[552,250,1],[556,340,1],[532,440,1],[490,515,0.95],[468,560,0.8],[470,650,0.45],[478,760,0.15],[486,880,0],[490,960,0]];
+        const EAR = [[402,350,1],[428,326,1],[458,338,1],[468,372,1],[462,410,1],[448,440,1],[428,462,1],[410,470,1]];
+        const BROW = [[180,270,1],[208,262,1],[240,264,1]];
+        const EYE = [[196,302,1],[214,296,1],[234,300,1]];
+        const NOSTRIL = [[124,420,1],[136,410,1],[150,418,1]];
+        const MOUTH = [[146,489,1],[166,492,1],[186,489,1]];
+        const PROFILE = FRONT.slice(2, 16); // hairline → menton (the olive analysis stroke)
+
+        function pose(pts, p) {
+          return pts.map(([x, y, w]) => {
+            const a = (FWD.rot * p * w * Math.PI) / 180;
+            const dx = x - PIVOT[0], dy = y - PIVOT[1];
+            const rx = PIVOT[0] + dx * Math.cos(a) - dy * Math.sin(a) + FWD.dx * p * w;
+            const ry = PIVOT[1] + dx * Math.sin(a) + dy * Math.cos(a) + FWD.dy * p * w;
+            return [OX + rx * K, OY + ry * K];
+          });
+        }
+        function smooth(pts) {
+          const f = (n) => n.toFixed(1);
+          let d = `M${f(pts[0][0])} ${f(pts[0][1])}`;
+          for (let i = 0; i < pts.length - 1; i++) {
+            const p0 = pts[Math.max(i - 1, 0)], p1 = pts[i], p2 = pts[i + 1], p3 = pts[Math.min(i + 2, pts.length - 1)];
+            const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6];
+            const c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+            d += ` C${f(c1[0])} ${f(c1[1])} ${f(c2[0])} ${f(c2[1])} ${f(p2[0])} ${f(p2[1])}`;
+          }
+          return d;
+        }
+        const PARTS = { "h-front": FRONT, "h-back": BACK, "h-ear": EAR, "h-brow": BROW, "h-eye": EYE, "h-nostril": NOSTRIL, "h-mouth": MOUTH };
+        const D = (id, p) => smooth(pose(PARTS[id], p));
+        Object.keys(PARTS).forEach((id) => document.getElementById(id).setAttribute("d", D(id, 0)));
+        document.getElementById("olive-profile").setAttribute("d", smooth(pose(PROFILE, 0)));
+        document.getElementById("ghost-front").setAttribute("d", D("h-front", 1));
+        document.getElementById("ghost-back").setAttribute("d", D("h-back", 1));
+        const S = (x, y) => [OX + x * K, OY + y * K];
+
+        // jaw analysis lines (profile view, neutral)
+        const gon = S(404, 552), men = S(186, 606), cond = S(400, 405);
+        document.getElementById("a-border").setAttribute("d", `M${gon[0]} ${gon[1]} L${men[0]} ${men[1]}`);
+        document.getElementById("a-ramus").setAttribute("d", `M${gon[0]} ${gon[1]} L${cond[0]} ${cond[1]}`);
+        (function arc() {
+          const r = 80, a1 = Math.atan2(men[1] - gon[1], men[0] - gon[0]), a2 = Math.atan2(cond[1] - gon[1], cond[0] - gon[0]);
+          const p1 = [gon[0] + r * Math.cos(a1), gon[1] + r * Math.sin(a1)], p2 = [gon[0] + r * Math.cos(a2), gon[1] + r * Math.sin(a2)];
+          document.getElementById("a-arc").setAttribute("d", `M${p1[0]} ${p1[1]} A${r} ${r} 0 0 1 ${p2[0]} ${p2[1]}`);
+        })();
+
+        // vertebrae (sage), cervical stack C1–C7
+        (function () {
+          const g = document.getElementById("vertebrae");
+          const xs = [418, 410, 404, 401, 402, 407, 414];
+          xs.forEach((x, i) => {
+            const [sx, sy] = S(x - 24, 500 + i * 56);
+            const r = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+            r.setAttribute("x", sx); r.setAttribute("y", sy); r.setAttribute("width", 48 * K); r.setAttribute("height", 38 * K); r.setAttribute("rx", 10);
+            r.setAttribute("fill", "#c7d1af"); r.setAttribute("fill-opacity", "0.14"); r.setAttribute("stroke", "#c7d1af"); r.setAttribute("stroke-width", "2");
+            r.setAttribute("id", "vert-" + i);
+            g.appendChild(r);
+          });
+        })();
+
+        // masseter (zygomatic arch → mandibular angle), fibers, load arrows
+        (function () {
+          const P = (x, y) => S(x, y).map((n) => n.toFixed(1)).join(" ");
+          document.getElementById("masseter-body").setAttribute("d", `M${P(296, 404)} L${P(378, 398)} C${P(398, 470)} ${P(410, 520)} ${P(402, 552)} L${P(318, 574)} C${P(306, 520)} ${P(298, 460)} ${P(296, 404)} Z`);
+          const fib = document.getElementById("masseter-fibers");
+          [[312, 412, 330, 566], [334, 408, 352, 562], [356, 404, 374, 558], [374, 402, 392, 552]].forEach(([a, b, c, d2]) => {
+            const l = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            l.setAttribute("d", `M${P(a, b)} L${P(c, d2)}`);
+            fib.appendChild(l);
+          });
+          const load = document.getElementById("load");
+          [[250, 655, 250, 626], [320, 645, 320, 614], [196, 662, 198, 634]].forEach(([a, b, c, d2]) => {
+            const l = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            const [x2, y2] = S(c, d2);
+            l.setAttribute("d", `M${P(a, b)} L${P(c, d2)} M${(x2 - 12).toFixed(1)} ${(y2 + 14).toFixed(1)} L${x2.toFixed(1)} ${y2.toFixed(1)} L${(x2 + 12).toFixed(1)} ${(y2 + 14).toFixed(1)}`);
+            load.appendChild(l);
+          });
+          // posture reference lines
+          const ear = S(PIVOT[0], PIVOT[1]);
+          const pl = document.getElementById("plumb-line");
+          pl.setAttribute("x1", ear[0]); pl.setAttribute("y1", ear[1] - 60); pl.setAttribute("x2", ear[0]); pl.setAttribute("y2", S(0, 940)[1]);
+          const sl = document.getElementById("shoulder-line");
+          sl.setAttribute("x1", ear[0] - 120); sl.setAttribute("y1", S(0, 940)[1]); sl.setAttribute("x2", ear[0] + 160); sl.setAttribute("y2", S(0, 940)[1]);
+          // frame-6 corner brackets around the portrait
+          const fr = document.getElementById("frame6");
+          const [x0, y0, x1, y1, L] = [150, 640, 930, 1470, 70];
+          [[x0, y0 + L, x0, y0, x0 + L, y0], [x1 - L, y0, x1, y0, x1, y0 + L], [x0, y1 - L, x0, y1, x0 + L, y1], [x1 - L, y1, x1, y1, x1, y1 - L]].forEach((c) => {
+            const l = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            l.setAttribute("d", `M${c[0]} ${c[1]} L${c[2]} ${c[3]} L${c[4]} ${c[5]}`);
+            fr.appendChild(l);
+          });
+          const ring = document.getElementById("jaw-ring");
+          const jc = S(300, 560);
+          ring.setAttribute("cx", jc[0]); ring.setAttribute("cy", jc[1]);
+        })();
+
+        function placeTag(id, x, y) {
+          const el = document.getElementById(id);
+          el.style.left = x + "px"; el.style.top = y + "px";
+        }
+        placeTag("t-head", 650, 1250);
+        placeTag("t-mand", 110, 1310);
+        placeTag("t-mast", 600, 1010);
+        placeTag("t-forward", 90, 640);
+        placeTag("t-neutral", 700, 640);
+        placeTag("t-posture", 660, 1290);
+        placeTag("t-function", 640, 1060);
+        placeTag("t-genetics", 640, 720);
+
+        // ---------- jaw state as a pure function of time (shared by GSAP + three) ----------
+        const ease = (x) => (x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x));
+        const seg = (t, a, b) => ease((t - a) / (b - a));
+        const f = (i) => F[i].start;
+        function postureAt(t) {
+          const s = f(1);
+          return seg(t, s + 0.4, s + 1.8) - seg(t, s + 3.6, s + 5.0);
+        }
+        function jawState(t) {
+          const s3 = f(2), s4 = f(3), s5 = f(4), s6 = f(5);
+          const opacity = seg(t, 3.6, 4.8) * (1 - seg(t, s5 - 0.3, s5 + 0.2)) + seg(t, s6 + 0.2, s6 + 0.9);
+          // three-quarter spin in, then a slow return to profile
+          const ry = -0.95 * seg(t, s3 + 0.1, s3 + 1.1) * (1 - seg(t, s3 + 1.6, s3 + 5.0));
+          let chew = 0;
+          const c0 = s4 + 3.6, c1 = s5 - 0.6;
+          if (t > c0 && t < c1) chew = 0.5 - 0.5 * Math.cos((2 * Math.PI * (t - c0)) / 0.9);
+          chew *= seg(t, c0, c0 + 0.4) * (1 - seg(t, c1 - 0.4, c1));
+          return { opacity, ry, chew, posture: postureAt(t) };
+        }
+        window.__jawState = jawState;
+
+        // ---------- GSAP master timeline ----------
+        const tl = gsap.timeline({ paused: true });
+        const $ = (s) => document.querySelector(s);
+        const words = (sel) => document.querySelectorAll(sel + " .w");
+        function headlineIn(sel, at, stagger = 0.07) {
+          tl.fromTo(words(sel), { opacity: 0, y: 26, filter: "blur(14px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.55, ease: "power3.out", stagger }, at);
+        }
+        function headlineOut(sel, at) {
+          tl.to(words(sel), { opacity: 0, y: -14, filter: "blur(10px)", duration: 0.35, ease: "power2.in", stagger: 0.03 }, at);
+        }
+        function pop(sel, at) {
+          tl.fromTo(sel, { opacity: 0, y: 14, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "power3.out" }, at);
+        }
+        function fade(sel, at, to = 0, d = 0.35) { tl.to(sel, { opacity: to, duration: d, ease: "power2.inOut" }, at); }
+        function draw(sel, at, d, ease = "power2.inOut") { tl.fromTo(sel, { strokeDasharray: "1 1", strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: d, ease }, at); }
+        function chapter(text, num, at) {
+          tl.to("#chapter-text", { opacity: 0, duration: 0.2 }, at - 0.2);
+          tl.set("#chapter-text", { textContent: text }, at);
+          tl.to("#chapter-text", { opacity: 1, duration: 0.3 }, at);
+          tl.to("#numeral", { opacity: 0, duration: 0.25 }, at - 0.25);
+          tl.set("#numeral", { textContent: num }, at);
+          tl.to("#numeral", { opacity: 0.045, duration: 0.5 }, at);
+        }
+        const word = (fi, i) => F[fi].start + F[fi].words[Math.min(i, F[fi].words.length - 1)].start;
+        const findWord = (fi, text) => {
+          const w = F[fi].words.findIndex((x) => x.text.toLowerCase().replace(/[^a-z']/g, "") === text);
+          return word(fi, Math.max(w, 0));
+        };
+
+        // F1 — hook
+        tl.fromTo("#stage", { scale: 1.0 }, { scale: 1.12, duration: F[0].duration + 0.3, ease: "sine.inOut" }, 0);
+        draw("#h-front", 0.05, 2.6);
+        draw("#h-back", 0.35, 2.4);
+        draw("#h-ear", 1.2, 1.0);
+        ["#h-brow", "#h-eye", "#h-nostril", "#h-mouth"].forEach((s, i) => draw(s, 1.6 + i * 0.15, 0.6));
+        draw("#olive-profile", 0.3, 2.4, "power1.inOut");
+        headlineIn("#hl1", 0.35);
+        tl.fromTo("#hl1 .em", { scale: 1 }, { scale: 1.08, duration: 0.25, yoyo: true, repeat: 1, ease: "power2.out" }, findWord(0, "genetics"));
+        fade("#olive-profile", f(1) - 0.4, 0, 0.5);
+        headlineOut("#hl1", f(1) - 0.35);
+
+        // F2 — posture
+        chapter("02 — The posture", "02", f(1));
+        tl.to("#stage", { scale: 1.0, x: 0, y: 0, duration: 0.9, ease: "power2.inOut" }, f(1) - 0.2);
+        headlineIn("#hl2", f(1) + 0.05);
+        const sp = f(1) + 0.4, ep = f(1) + 1.8, sb = f(1) + 3.6, eb = f(1) + 5.0;
+        Object.keys(PARTS).forEach((id) => {
+          tl.to("#" + id, { attr: { d: D(id, 1) }, duration: ep - sp, ease: "power2.inOut" }, sp);
+          tl.to("#" + id, { attr: { d: D(id, 0) }, duration: eb - sb, ease: "power2.inOut" }, sb);
+        });
+        fade("#plumb", sp - 0.2, 1, 0.4);
+        draw("#plumb-line", sp - 0.2, 0.8);
+        const ear0 = S(PIVOT[0], PIVOT[1]), ear1 = pose([[PIVOT[0], PIVOT[1], 1]], 1)[0];
+        const chin0 = pose([[255, 640, 0.9]], 0)[0], chin1 = pose([[255, 640, 0.9]], 1)[0];
+        tl.set("#ear-dot", { attr: { cx: ear0[0], cy: ear0[1] } }, 0);
+        tl.set("#chin-marker", { attr: { cx: chin0[0], cy: chin0[1] } }, 0);
+        tl.to("#ear-dot", { attr: { cx: ear1[0], cy: ear1[1] }, duration: ep - sp, ease: "power2.inOut" }, sp);
+        tl.to("#chin-marker", { attr: { cx: chin1[0], cy: chin1[1], r: 52 }, duration: ep - sp, ease: "power2.inOut" }, sp);
+        tl.to("#ear-dot", { attr: { cx: ear0[0], cy: ear0[1] }, duration: eb - sb, ease: "power2.inOut" }, sb);
+        tl.to("#chin-marker", { attr: { cx: chin0[0], cy: chin0[1], r: 40 }, duration: eb - sb, ease: "power2.inOut" }, sb);
+        pop("#t-forward", ep - 0.3);
+        tl.to("#stage", { x: 60, duration: 2.0, ease: "sine.inOut" }, sp);
+        tl.to("#stage", { x: -30, duration: 2.4, ease: "sine.inOut" }, sb);
+        fade("#ghost", sb, 0.7, 0.6);
+        pop("#t-neutral", eb - 0.2);
+        pop("#sub2", findWord(1, "position") - 0.1);
+        fade(["#t-forward", "#t-neutral", "#sub2", "#plumb", "#ghost"], f(2) - 0.4, 0, 0.4);
+        headlineOut("#hl2", f(2) - 0.35);
+
+        // F3 — mechanics
+        chapter("03 — The mechanics", "03", f(2));
+        tl.to("#stage", { x: 0, scale: 1.18, transformOrigin: "540px 1150px", duration: 1.4, ease: "power2.inOut" }, f(2) - 0.2);
+        tl.to("#head", { opacity: 0.28, duration: 0.8 }, f(2));
+        headlineIn("#hl3", f(2) + 0.1);
+        fade("#vertebrae", findWord(2, "head") - 0.1, 1, 0.5);
+        pop("#t-head", findWord(2, "head") - 0.05);
+        draw("#a-border", findWord(2, "jaw") - 0.1, 0.7);
+        draw("#a-ramus", findWord(2, "jaw") + 0.2, 0.6);
+        draw("#a-arc", findWord(2, "jaw") + 0.5, 0.6);
+        pop("#t-mand", findWord(2, "jaw") - 0.05);
+        fade("#masseter", findWord(2, "chewing") - 0.1, 0.55, 0.5);
+        pop("#t-mast", findWord(2, "chewing") - 0.05);
+        pop("#sub3", findWord(2, "link"));
+        fade(["#t-head", "#t-mand", "#t-mast", "#sub3", "#vertebrae", "#a-arc", "#a-ramus", "#a-border"], f(3) - 0.4, 0, 0.4);
+        fade("#masseter", f(3) - 0.4, 0, 0.4);
+        headlineOut("#hl3", f(3) - 0.35);
+
+        // F4 — chewing
+        chapter("04 — Soft foods & chewing", "04", f(3));
+        headlineIn("#hl4", f(3) + 0.05);
+        tl.fromTo("#tile-soft", { opacity: 0, x: -60, filter: "blur(10px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.6, ease: "power3.out" }, f(3) + 0.5);
+        tl.fromTo("#tile-firm", { opacity: 0, x: 60, filter: "blur(10px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.6, ease: "power3.out" }, f(3) + 0.8);
+        tl.to("#tiles", { opacity: 0, y: -40, filter: "blur(12px)", duration: 0.5, ease: "power2.in" }, f(3) + 3.3);
+        tl.to("#stage", { scale: 1.28, transformOrigin: "560px 1260px", duration: 1.2, ease: "power2.inOut" }, f(3) + 3.0);
+        fade("#masseter", f(3) + 3.4, 0.9, 0.5);
+        const c0 = f(3) + 3.6, c1 = f(4) - 0.6, cycles = Math.floor((c1 - c0) / 0.9);
+        tl.fromTo("#masseter-body", { scaleY: 1, scaleX: 1 }, { scaleY: 0.95, scaleX: 1.05, transformOrigin: "50% 40%", duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: cycles * 2 - 1 }, c0);
+        fade("#load", c0, 1, 0.4);
+        tl.fromTo("#load", { y: 0 }, { y: -10, duration: 0.45, ease: "sine.inOut", yoyo: true, repeat: cycles * 2 - 1 }, c0);
+        pop("#t-growth", findWord(3, "growth") - 0.1);
+        pop("#sub4", findWord(3, "populations"));
+        fade(["#masseter", "#load", "#t-growth", "#sub4"], f(4) - 0.4, 0, 0.4);
+        headlineOut("#hl4", f(4) - 0.35);
+
+        // F5 — caveat (cream turn): the dark chrome steps aside while the cream panel is up
+        fade(["#chrome", "#ground"], f(4) - 0.1, 0, 0.3);
+        fade(["#chrome", "#ground"], f(5) - 0.15, 1, 0.4);
+        tl.set("#chapter-text", { textContent: "05 — The caveat" }, f(4));
+        tl.fromTo("#panel", { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 0.6, ease: "power3.inOut" }, f(4));
+        headlineIn("#hl5", f(4) + 0.3);
+        tl.fromTo("#col-a", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, findWord(4, "adults") - 0.1);
+        tl.fromTo("#col-b", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, findWord(4, "redraw") - 0.4);
+        tl.to("#stage", { scale: 1.0, transformOrigin: "540px 1260px", duration: 0.1 }, f(4) + 0.7);
+        tl.to("#head", { opacity: 1, duration: 0.1 }, f(4) + 0.7);
+
+        // F6 — takeaway
+        tl.set("#chapter-text", { textContent: "06 — The takeaway" }, f(5) - 0.2);
+        tl.set("#numeral", { textContent: "06" }, f(5) - 0.2);
+        tl.to("#f5 .panel, #f5 .cols, #hl5", { clipPath: "inset(0 0 100% 0)", duration: 0.6, ease: "power3.inOut" }, f(5) - 0.15);
+        fade("#frame6", f(5) + 0.3, 1, 0.6);
+        fade("#jaw-ring", f(5) + 0.5, 1, 0.6);
+        pop("#t-posture", findWord(5, "posture") - 0.05);
+        pop("#t-function", findWord(5, "function") - 0.05);
+        pop("#t-genetics", findWord(5, "genetics") - 0.05);
+        headlineIn("#hl6", findWord(5, "understand") - 0.1, 0.09);
+        const lock = T.lockupStart;
+        fade(["#stage", "#chrome", "#hl6", "#numeral"], lock - 0.1, 0, 0.5);
+        tl.fromTo("#lockup", { opacity: 0, y: 20, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power3.out" }, lock + 0.2);
+
+        // ---------- captions (one phrase at a time, active word bright) ----------
+        (function () {
+          const box = $("#caption");
+          const all = [];
+          F.forEach((fr, fi) => {
+            let phrase = [];
+            fr.words.forEach((w, i) => {
+              phrase.push(w);
+              if (/[.,?:]$/.test(w.text) || i === fr.words.length - 1) {
+                all.push({ fi, words: phrase.map((x) => ({ text: x.text, start: fr.start + x.start, end: fr.start + x.end })) });
+                phrase = [];
+              }
+            });
+          });
+          all.forEach((ph, pi) => {
+            const div = document.createElement("div");
+            div.className = "cap-line";
+            div.style.position = "absolute"; div.style.left = "0"; div.style.right = "0"; div.style.opacity = "0";
+            ph.words.forEach((w) => {
+              const s = document.createElement("span");
+              s.className = "cw"; s.textContent = w.text + " ";
+              div.appendChild(s);
+              tl.to(s, { opacity: 1, duration: 0.12 }, w.start);
+            });
+            box.appendChild(div);
+            const s0 = ph.words[0].start, e0 = ph.words[ph.words.length - 1].end;
+            const next = all[pi + 1] ? all[pi + 1].words[0].start : e0 + 0.6;
+            tl.to(div, { opacity: 1, duration: 0.15 }, s0 - 0.05);
+            tl.to(div, { opacity: 0, duration: 0.12 }, Math.min(next - 0.1, e0 + 0.5));
+            if (ph.fi === 4) div.style.color = "#292929";
+          });
+        })();
+
+        tl.set({}, {}, T.total);
+        window.__timelines["main"] = tl;
+      })();
+    </script>
+
+    <script type="module">
+      import * as THREE from "./assets/vendor/three.module.min.js";
+      const W = 1080, H = 1920, PX = 1.5;
+      const canvas = document.getElementById("jaw3d");
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, preserveDrawingBuffer: true });
+      renderer.setPixelRatio(1);
+      renderer.setSize(W * PX, H * PX, false);
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      const scene = new THREE.Scene();
+      const camera = new THREE.OrthographicCamera(0, W, 0, -H, -2000, 2000);
+      camera.position.set(0, 0, 1000);
+
+      const clay = new THREE.MeshStandardMaterial({ color: 0xece5d4, roughness: 0.62, metalness: 0.0, transparent: true });
+      scene.add(new THREE.HemisphereLight(0xfff6e6, 0x2a2a26, 1.55));
+      const key = new THREE.DirectionalLight(0xffffff, 2.1); key.position.set(500, 700, 900); scene.add(key);
+      const rim = new THREE.DirectionalLight(0xc7d1af, 1.1); rim.position.set(-700, 200, -400); scene.add(rim);
+
+      // --- mandible body: lofted rounded cross-section along a U-shaped dental arch (X anterior = negative) ---
+      const arch = new THREE.CatmullRomCurve3([
+        new THREE.Vector3(205, 0, 86), new THREE.Vector3(120, 0, 88), new THREE.Vector3(40, 0, 80),
+        new THREE.Vector3(-40, 0, 58), new THREE.Vector3(-86, 0, 28), new THREE.Vector3(-102, 0, 0),
+        new THREE.Vector3(-86, 0, -28), new THREE.Vector3(-40, 0, -58), new THREE.Vector3(40, 0, -80),
+        new THREE.Vector3(120, 0, -88), new THREE.Vector3(205, 0, -86),
+      ]);
+      function bodyGeometry() {
+        const segs = 140, ring = 28, pos = [], idx = [];
+        for (let i = 0; i <= segs; i++) {
+          const u = i / segs, p = arch.getPointAt(u), tg = arch.getTangentAt(u);
+          const n = new THREE.Vector3(tg.z, 0, -tg.x).normalize();
+          const chin = Math.exp(-Math.pow((u - 0.5) / 0.09, 2));
+          const h = 72 + 18 * chin, th = 26 + 6 * chin, cy = -6 - 6 * chin;
+          for (let j = 0; j < ring; j++) {
+            const a = (j / ring) * Math.PI * 2;
+            const cx = Math.cos(a), sy = Math.sin(a);
+            const sx = Math.sign(cx) * Math.pow(Math.abs(cx), 0.55), sY = Math.sign(sy) * Math.pow(Math.abs(sy), 0.55);
+            const out = th / 2 * sx + (sY < 0 ? chin * 9 * -sY * Math.max(sx, 0) : 0);
+            pos.push(p.x + n.x * out, cy + (h / 2) * sY, p.z + n.z * out);
+          }
+        }
+        for (let i = 0; i < segs; i++) for (let j = 0; j < ring; j++) {
+          const a = i * ring + j, b = i * ring + ((j + 1) % ring), c = (i + 1) * ring + j, d = (i + 1) * ring + ((j + 1) % ring);
+          idx.push(a, c, b, b, c, d);
+        }
+        const g = new THREE.BufferGeometry();
+        g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
+        g.setIndex(idx); g.computeVertexNormals();
+        return g;
+      }
+      const mand = new THREE.Group();
+      mand.add(new THREE.Mesh(bodyGeometry(), clay));
+      // end caps
+      [0, 1].forEach((u) => {
+        const p = arch.getPointAt(u);
+        const cap = new THREE.Mesh(new THREE.SphereGeometry(1, 24, 16), clay);
+        cap.scale.set(15, 36, 14); cap.position.set(p.x, -6, p.z); mand.add(cap);
+      });
+      // rami with condyle + coronoid
+      const rs = new THREE.Shape();
+      rs.moveTo(170, -26); rs.lineTo(226, -32); rs.quadraticCurveTo(254, -28, 252, 2);
+      rs.lineTo(242, 70); rs.quadraticCurveTo(236, 110, 238, 132); rs.lineTo(214, 140);
+      rs.quadraticCurveTo(200, 100, 184, 104); rs.quadraticCurveTo(170, 116, 160, 142);
+      rs.quadraticCurveTo(146, 90, 148, 40); rs.quadraticCurveTo(152, 6, 170, -26);
+      const ramusGeo = new THREE.ExtrudeGeometry(rs, { depth: 14, bevelEnabled: true, bevelThickness: 6, bevelSize: 6, bevelSegments: 4, curveSegments: 18 });
+      [1, -1].forEach((side) => {
+        const r = new THREE.Mesh(ramusGeo, clay);
+        r.position.z = side > 0 ? 80 : -94; r.rotation.y = side * -0.1;
+        mand.add(r);
+        const cond = new THREE.Mesh(new THREE.SphereGeometry(1, 28, 20), clay);
+        cond.scale.set(20, 15, 30); cond.position.set(228, 142, side * 84); mand.add(cond);
+      });
+      // teeth
+      const toothGeo = new THREE.SphereGeometry(1, 18, 14);
+      for (let i = 0; i < 16; i++) {
+        const u = 0.08 + (i / 15) * 0.84; if (Math.abs(u - 0.5) < 0.02) continue;
+        const p = arch.getPointAt(u), back = Math.abs(u - 0.5) * 2;
+        const t = new THREE.Mesh(toothGeo, clay);
+        const r = 7 + 3.5 * back;
+        t.scale.set(r, r * 1.15, r * 0.95); t.position.set(p.x, 32 + 2 * (1 - back), p.z * 0.94); mand.add(t);
+      }
+
+      // pivots: place (posture + alignment) → spin (3/4 view) → chew (about condyle)
+      const place = new THREE.Group(), spin = new THREE.Group(), chew = new THREE.Group();
+      const COND = new THREE.Vector3(228, 142, 0), CENTER = new THREE.Vector3(70, 40, 0);
+      scene.add(place); place.add(spin); spin.position.copy(CENTER); spin.add(chew);
+      chew.position.copy(COND).sub(CENTER); chew.add(mand); mand.position.copy(COND).multiplyScalar(-1);
+
+      // align profile-view anchors to the line portrait (face-local → stage px)
+      const K = 1.4, OX = 82, OY = 560, PIVOT = [420, 400], FWD = { dx: -75, dy: 18, rot: 6 };
+      const faceMen = [186, 606], faceGon = [404, 552];
+      const mMen = [-112, -54], mGon = [246, -34];
+      const vf = [faceGon[0] - faceMen[0], faceGon[1] - faceMen[1]], vm = [mGon[0] - mMen[0], -(mGon[1] - mMen[1])];
+      const SCALE = (Math.hypot(vf[0], vf[1]) / Math.hypot(vm[0], vm[1])) * K;
+      const BASE_ROT = -(Math.atan2(vf[1], vf[0]) - Math.atan2(vm[1], vm[0])); // three z is CCW, screen y is down
+      place.scale.setScalar(SCALE);
+
+      function poseFace(x, y, p) {
+        const a = (FWD.rot * p * Math.PI) / 180, dx = x - PIVOT[0], dy = y - PIVOT[1];
+        return [PIVOT[0] + dx * Math.cos(a) - dy * Math.sin(a) + FWD.dx * p, PIVOT[1] + dx * Math.sin(a) + dy * Math.cos(a) + FWD.dy * p];
+      }
+      function renderAt(t) {
+        const s = window.__jawState(t);
+        const a = (FWD.rot * s.posture * Math.PI) / 180;
+        const rot = BASE_ROT - a;
+        // world position of the mandible origin so that its menton lands on the posed face menton
+        const [fx, fy] = poseFace(faceMen[0], faceMen[1], s.posture);
+        const wx = OX + fx * K, wy = -(OY + fy * K);
+        const ox = mMen[0] * SCALE, oy = mMen[1] * SCALE;
+        place.rotation.z = rot;
+        place.position.set(wx - (ox * Math.cos(rot) - oy * Math.sin(rot)), wy - (ox * Math.sin(rot) + oy * Math.cos(rot)), 0);
+        spin.rotation.y = s.ry;
+        chew.rotation.z = 0.07 * s.chew;
+        clay.opacity = s.opacity;
+        place.visible = s.opacity > 0.001;
+        renderer.render(scene, camera);
+      }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      const tick = () => { const tl = window.__timelines && window.__timelines["main"]; renderAt(window.__hfThreeTime ?? (tl ? tl.time() : 0)); };
+      if (window.__timelines && window.__timelines["main"]) window.__timelines["main"].eventCallback("onUpdate", tick);
+      renderAt(window.__hfThreeTime || 0);
+    </script>
+  </body>
+</html>
