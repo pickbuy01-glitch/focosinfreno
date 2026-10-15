@@ -1,205 +1,187 @@
 # Product Marketing Context
 
-**Document version:** v2
-**Last updated:** 2026-10-14
+**Document version:** v3
+**Last updated:** 2026-10-15
 
-> Fuentes: el ebook *The Face Card Protocol* (PDF, 12 páginas, "Digital Edition 2026") y el análisis estratégico del producto. Las citas entre comillas son textuales del ebook. Lo marcado como **[Hipótesis]** o **[Pendiente]** no sale del ebook y hay que validarlo.
+> Fuente: el ebook *The Face Card Protocol*, edición 2 (PDF, 22 páginas, "Digital Edition 2026"), más el análisis estratégico inicial. Las citas entre comillas son textuales del ebook. Lo marcado como **[Hipótesis]** o **[Pendiente]** no sale del ebook y hay que validarlo.
 
 ## Product Overview
-**One-liner:** Un protocolo de 30 días y 20 minutos al día que reúne gua sha, face yoga, mewing, dieta anti-hinchazón y rutina de skincare en un solo sistema.
-**What it does:** Guía digital ilustrada que organiza el cuidado facial en tres fases (De-puff → Structure → Maintain) y un plan de 30 días con checklist diario. Explica por qué la cara amanece hinchada, da el paso a paso de gua sha, ejercicios faciales, postura de la lengua, ingredientes de skincare y rutinas AM/PM de 10 minutos cada una.
-**Product category:** Ebook / guía digital de estética facial y skincare (dónde lo buscan: "face card", "depuff face", "gua sha routine", "face yoga", "mewing", "glow up", "rutina facial").
-**Product type:** Producto digital informativo (ebook PDF, info-product), venta directa.
+**One-liner:** Un sistema de 30 días, unos 20 minutos al día, para deshinchar y definir la cara con gua sha, frío, sueño, dieta anti-hinchazón, face yoga, mewing y una rutina de skincare.
+**What it does:** Guía digital ilustrada que ordena el cuidado facial en tres fases (De-puff → Structure → Maintain) con un plan de 30 días, un tracker imprimible día por día, lista de compras, guía de fotos de progreso, ajustes por tipo de piel, preguntas frecuentes y fuentes científicas.
+**Product category:** Ebook / guía digital de estética facial y skincare (búsquedas: "face card", "depuff face", "gua sha routine", "face yoga", "mewing", "glow up", "rutina facial", "cara hinchada").
+**Product type:** Producto digital informativo (ebook PDF), venta directa en Hotmart.
 **Business model:** Pago único.
-- Precio recomendado: **US$9,99**
-- Precio promocional de lanzamiento: **US$7,99**
-- Rango para validar: US$7,99–9,99. US$12,99 o más solo si se añaden recursos (imprimibles, tracker, ejemplos).
-- Estos precios son estimaciones; se validan con las conversiones reales.
+- Precio recomendado: **US$9,99**. Promo de lanzamiento: **US$7,99**.
+- Con los bonos de la edición 2 (tracker, lista de compras, guía de fotos, FAQ) se puede probar **US$12,99–14,99**. **[Hipótesis]** validar con conversiones.
 
 **Ficha del ebook:**
 - **Título:** The Face Card Protocol
-- **Subtítulo propuesto:** The 30-Day Facial Aesthetics & Skincare System
-- **Tagline del ebook:** "The unretouched guide to hacking your genetics."
-- **Autora / marca:** Valeria Saint ("V by Valeria Saint", "V")
-- **Edición:** Digital Edition 2026
-- **Idioma actual:** inglés
-- **Extensión:** 12 páginas
+- **Tagline:** "The 30-day system to de-puff and define your face."
+- **Cita de apertura:** "It's not just genetics. It's a system."
+- **Autora / marca:** V by Valeria Saint. **V es una persona digital; sus imágenes están generadas con IA** (lo declara el propio ebook).
+- **Edición:** Digital Edition 2026 · inglés · 22 páginas
 
-**Contenido (índice real):**
-1. Portada y cita de apertura: "This is not genetics. This is a system."
-2. **The Origin Story:** "How V changed her face in 21 days. No filter. No BS." Antes/después (Día 0 vs Día 21).
-3. **What's inside:** "Three phases. One system. Zero excuses."
-4. **Phase One · De-puff (semanas 1–2):** "Your lymphatic system has no pump." Las 4 causas de la hinchazón: sodio, alcohol, mal sueño, carbohidratos refinados.
-5. **Gua sha · The protocol:** "6 steps. 7 minutes. Every morning." Paso 0 (abrir ganglios linfáticos) + 6 pasos con número de pasadas y dirección.
-6. **The anti-puff diet:** "What you eat shows up on your face." Listas *Eat this / Drop this*, sodio diario recomendado vs. real (1.500 mg ideal AHA, 2.300 mg límite, 3.400 mg ingesta media) y "The 48-hour rule".
-7. **Phase Two · Structure (semanas 2–3) · Face yoga:** "Your face has +50 muscles. Most are untrained." 5 ejercicios ilustrados: The Sky Kiss, Cheek Lift, Fish Face, Exaggerated Vowels, Forehead Resistance.
-8. **Mewing:** postura de la lengua, checklist de 5 pasos y "Realistic timeline" (semana 1–2, mes 1, mes 3+).
-9. **Phase Three · Maintain (semanas 3–4) · Skincare:** "Only the ingredients that actually work": retinol, ácido hialurónico, vitamina C, péptidos, ceramidas, bakuchiol. SPF obligatorio.
-10. **Rutina AM (10 min):** limpiador suave → sérum de vitamina C → ácido hialurónico → hidratante con péptidos → SPF 30–50.
-11. **Rutina PM (10 min):** aceite limpiador → gel suave (doble limpieza) → retinol (2–3x/semana) → crema de ceramidas → aceite facial (jojoba, rosa mosqueta o escualano).
-12. **The plan:** "30 days. 20 min a day. New face era." Cuatro bloques con checklist: 01 De-puff (días 1–7), 02 Structure (8–14), 03 Level Up (15–21), 04 Lock It In (22–30).
+**Contenido (edición 2):**
+1. Portada · 2. Cita de apertura · 3. **Read this first** (seguridad, a quién consultar, prueba de parche, aviso de imágenes IA)
+4. **The idea:** "Puffy mornings to a sharper, de-puffed face." Imágenes ilustrativas IA, marcadas como "not a real before/after".
+5. **What's inside:** Fase 1 días 1–7, Fase 2 días 8–21, Fase 3 días 22–30, más los extras.
+6. **Fase 1 · De-puff:** "Your lymphatic system has no pump." 4 causas de hinchazón.
+7. **Gua sha:** "7 steps. 7 minutes. Every morning." + cuándo no usarlo.
+8. **Cold · Water · Sleep:** "The 3 habits that do half the work."
+9. **Anti-puff diet:** Eat this / Drop this, sodio (AHA), The 48-hour rule.
+10. **Fase 2 · Structure · Face yoga:** "Your face has 40+ muscles." Estudio de Northwestern explicado con honestidad + 5 ejercicios.
+11. **Mewing:** "The posture behind a cleaner jawline." Checklist, cuándo parar, cronograma realista.
+12. **Fase 3 · Maintain:** 6 ingredientes, avisos de embarazo, SPF.
+13. **AM + PM:** "Simple on purpose." Rutinas + "Retinol: the safety rules".
+14. **Tweaks for your skin type:** grasa, seca, sensible, con acné.
+15. **The plan:** "30 days. 20 min a day. New face era."
+16–17. **Printable tracker** día por día.
+18. **Shopping list:** "Everything you need. Nothing you don't."
+19. **Progress photos:** "Same light. Same angle. Honest results."
+20. **FAQ:** "You asked. Real answers."
+21. **What's next:** mantenimiento, #FaceCardProtocol, About V.
+22. **Sources & legal:** 9 fuentes (JAMA Dermatology, AHA, BJD, ACOG, AAD, CDC, Mayo Clinic…) y disclaimer.
 
 ## Target Audience
 **Target companies:** No aplica (B2C).
-**Decision-makers:** **Mujeres.** La compradora es la usuaria. Todo el copy, los anuncios y la página de venta se escriben en femenino.
+**Decision-makers:** **Mujeres.** La compradora es la usuaria. Todo el copy se escribe en femenino.
 **Primary use case:** Quiere mejorar su rutina facial pero no sabe qué hacer, en qué orden ni cómo mantenerlo.
 **Jobs to be done:**
-- Deshinchar la cara por la mañana y verse con el rostro más definido.
-- Tener una rutina de skincare clara (qué ingredientes, en qué orden, mañana y noche) sin comprar de más.
-- Tener un plan con fecha y checklist que la obligue a ser constante.
+- Deshinchar la cara por la mañana y verse con el contorno más definido.
+- Tener una rutina de skincare clara y segura sin comprar de más.
+- Tener un plan con fecha y checklist que la ayude a ser constante.
 **Use cases:**
-- Se despierta con la cara hinchada y ojeras todos los días.
-- Ve en TikTok/Instagram gua sha, face yoga y mewing por separado y quiere una sola guía que lo junte.
-- Tiene un evento y quiere verse "más definida" ese día (The 48-hour rule).
-- Quiere hacer un antes/después propio de 30 días.
+- Se despierta con la cara hinchada y ojeras.
+- Ve gua sha, face yoga y mewing por separado en redes y quiere una sola guía.
+- Tiene un evento (The 48-hour rule).
+- Quiere hacer su propio antes/después de 30 días.
 
-**Mercados:** angloparlante (versión actual) e hispanohablante (requiere traducir el ebook y adaptar anuncios y la página de venta).
-**Canales donde vive la audiencia:** TikTok e Instagram Reels.
+**Mercados:** angloparlante (versión actual) e hispanohablante (requiere versión en español).
+**Canales:** TikTok e Instagram Reels → link en bio → Hotmart.
 
 ## Personas
-B2C, sin comité de compra. Una persona principal: mujer que consume contenido de belleza en TikTok e Instagram, 18–35 años **[Hipótesis de edad]**, que ya probó consejos sueltos y quiere un sistema.
+B2C. Una persona principal: mujer de 18–35 años **[Hipótesis de edad]** que consume contenido de belleza en redes, ya probó consejos sueltos y quiere un sistema.
 
 ## Problems & Pain Points
 **Core problem:** "Quiero mejorar mi rutina facial, pero no sé qué hacer, en qué orden ni cómo mantenerlo."
 **Why alternatives fall short:**
-- Los consejos de redes están dispersos: un vídeo de gua sha, otro de mewing, otro de retinol, sin orden ni plan.
-- Los productos solos (sérums, herramientas) no explican la técnica ni los hábitos (sodio, sueño, alcohol).
+- Los consejos de redes están dispersos y sin plan.
+- Los productos solos no explican la técnica ni los hábitos.
 - Los tratamientos estéticos son caros e invasivos.
-**What it costs them:** Dinero en productos que no sabe usar, tiempo viendo contenido sin aplicarlo y frustración por no ver cambios.
-**Emotional tension:** Cree que su cara "es así" por genética y no se puede cambiar. Del ebook: "I genuinely thought my face was just... genetics. That it would always look like this."
-**Dolores concretos que nombra el ebook:** "Puffy every morning. No jaw definition. Chronic under-eye swelling."
+**What it costs them:** Dinero en productos mal usados, tiempo viendo contenido sin aplicarlo y frustración.
+**Emotional tension:** Cree que su cara "es así" por genética.
+**Dolores que nombra el ebook:** "Puffy every morning. Soft jawline. Under-eye swelling."
 
 ## Competitive Landscape
 **[Hipótesis] — sin investigar todavía.**
-**Direct:** Otros ebooks y guías de glow-up, face yoga o gua sha de creadoras en Gumroad, Stan Store y Etsy. Se quedan cortos porque suelen cubrir una sola técnica.
-**Secondary:** Apps de face yoga y contenido gratuito en TikTok/YouTube. Gratis, pero disperso y sin plan de 30 días.
-**Indirect:** Tratamientos estéticos (rellenos, bótox, drenaje linfático en cabina) y comprar más productos de skincare. Caros y no enseñan hábitos.
+**Direct:** Otros ebooks de glow-up, face yoga o gua sha en Hotmart, Gumroad o Etsy. Suelen cubrir una sola técnica.
+**Secondary:** Apps de face yoga y contenido gratis en TikTok/YouTube. Disperso y sin plan.
+**Indirect:** Tratamientos estéticos y comprar más productos. Caros y no enseñan hábitos.
 
 ## Differentiation
 **Key differentiators:**
-- **Todo en un sistema:** gua sha + face yoga + mewing + dieta + skincare en una sola guía.
-- **Estructura:** 3 fases y un plan de 30 días con checklist diario.
-- **Corto y práctico:** 20 minutos al día; gua sha de 7 minutos; rutinas AM y PM de 10 minutos.
-- **Visual:** diagramas, ilustraciones de cada ejercicio y estética editorial premium (oliva, gris carbón, terracota, tipografía serif).
-- **Historia real de la autora:** antes/después sin filtro en 21 días.
-**How we do it differently:** Convierte el cuidado facial en un sistema por fases en lugar de una lista de consejos.
-**Why that's better:** Saber qué hacer cada día y en qué orden facilita la constancia.
-**Why customers choose us:** Precio bajo, se lee desde el móvil y promete un plan cerrado, no más información suelta.
+- **Todo en un sistema:** gua sha + frío + sueño + dieta + face yoga + mewing + skincare.
+- **Plan día por día** con tracker imprimible.
+- **Seguridad y honestidad:** avisos claros (embarazo, ATM, acné), fuentes citadas y expectativas realistas. Poco común en el nicho.
+- **Personalizable:** ajustes por tipo de piel.
+- **Visual y editorial:** estética premium reconocible.
+**How we do it differently:** Convierte el cuidado facial en un sistema por fases, con el porqué de cada paso.
+**Why that's better:** Saber qué hacer cada día facilita la constancia, y saber qué no hacer evita errores.
+**Why customers choose us:** Precio bajo, plan cerrado, se lee en el móvil, y no promete milagros.
 
 ## Objections
 | Objection | Response |
 |-----------|----------|
-| "Esto lo encuentro gratis en TikTok." | Sí, por partes. El ebook lo ordena en un plan de 30 días con checklist y te dice qué hacer cada día. |
-| "Mi cara es así por genética." | La hinchazón depende mucho de hábitos (sodio, alcohol, sueño) y de la circulación linfática; la Fase 1 trabaja eso. Sin prometer cambios estructurales. |
-| "No tengo tiempo." | 20 minutos al día; gua sha de 7 minutos; rutinas de 10 minutos. |
-| "¿Funcionará para mí?" | Los resultados varían. Se presenta como una rutina y un sistema de hábitos, no como garantía de cambio físico. |
-| "¿Tengo que comprar muchas cosas?" | Lo mínimo: una piedra gua sha y una rutina básica. Ofrece alternativas accesibles (CeraVe para ceramidas, bakuchiol para piel sensible). |
+| "Esto lo encuentro gratis en TikTok." | Por partes, sí. Aquí está ordenado en 30 días, con tracker y con lo que no debes hacer. |
+| "Mi cara es así por genética." | La hinchazón depende mucho de hábitos (sal, alcohol, sueño). La Fase 1 trabaja eso desde el día 1. |
+| "No tengo tiempo." | Unos 20 minutos al día; gua sha de 7 minutos; PM de 5 minutos. |
+| "¿Funcionará para mí?" | Los resultados varían. La hinchazón suele responder en días; el tono y la piel, en semanas. Garantía de Hotmart. |
+| "¿Tengo que comprar muchas cosas?" | Kit mínimo: limpiador, hidratante, SPF, gua sha y algo frío. El resto según tu presupuesto. |
+| "¿Es seguro?" | Incluye a quién no le conviene cada paso, prueba de parche y reglas del retinol. |
 
 **Anti-persona:**
-- Quien busca cambios estructurales garantizados o resultados tipo cirugía.
-- Quien tiene afecciones de la piel, problemas de mandíbula (ATM) o está bajo tratamiento dermatológico: debe consultar a un profesional antes de seguir el protocolo.
-- Usuarios avanzados de skincare que buscan contenido técnico profundo.
+- Quien busca cambios óseos o resultados tipo cirugía.
+- Quien tiene afecciones de piel, problemas de ATM o tratamiento dermatológico sin consultar antes.
+- Usuarias avanzadas de skincare que buscan contenido técnico profundo.
 
 ## Switching Dynamics
-**Push:** Cansancio de ver consejos sueltos sin resultados; despertarse hinchada cada mañana.
-**Pull:** Un plan de 30 días con checklist, una historia de antes/después y una estética que da ganas de usarlo.
-**Habit:** Seguir consumiendo vídeos gratis; seguir comprando productos en vez de cambiar hábitos.
-**Anxiety:** Que no funcione en su cara; que sea otro "glow up" que no se cumple; gastar en una guía que repite lo que ya sabe.
+**Push:** Cansancio de consejos sueltos sin resultados; despertarse hinchada.
+**Pull:** Plan de 30 días con tracker, estética cuidada, honestidad.
+**Habit:** Seguir viendo vídeos gratis; seguir comprando productos.
+**Anxiety:** Que no funcione; que sea otro "glow up" vacío; que sea peligroso para su piel.
 
 ## Customer Language
 **How they describe the problem:**
-- "I genuinely thought my face was just... genetics."
-- "Puffy every morning. No jaw definition. Chronic under-eye swelling."
+- "Puffy every morning. Soft jawline. Under-eye swelling."
 - "Quiero mejorar mi rutina facial, pero no sé qué hacer, en qué orden ni cómo mantenerlo."
-**How they describe us (frases del ebook):**
-- "This is not genetics. This is a system."
+**Frases del ebook:**
+- "It's not just genetics. It's a system."
 - "Three phases. One system. Zero excuses."
 - "30 days. 20 min a day. New face era."
-- "6 steps. 7 minutes. Every morning."
-- "Follow the system for 30 days. Then compare your day-one photo."
-- "No filter. No BS."
-**Words to use:** face card, system, protocol, de-puff, glow, sharp, defined, routine, 30 days, 20 minutes, no filter, unretouched, sistema, rutina, constancia, deshinchar.
-**Words to avoid:** "garantizado", "científicamente demostrado", "cambia tu estructura ósea", "sin cirugía" usado como equivalente a resultados de cirugía, "cura", "milagro", promesas de años menos con cifra exacta.
+- "7 steps. 7 minutes. Every morning."
+- "The 3 habits that do half the work."
+- "Everything you need. Nothing you don't."
+- "Same light. Same angle. Honest results."
+- "Day 30 isn't the end. It's your new normal."
+**Words to use:** face card, system, protocol, de-puff, sharper, defined, routine, 30 days, 20 minutes, honest, sistema, rutina, deshinchar, constancia.
+**Words to avoid:** "garantizado", "científicamente demostrado", "cambia tu mandíbula/huesos", "detox", "cura", "milagro", "unretouched"/"sin filtro" referido a V, cualquier frase que presente a V como persona real o su antes/después como real.
 **Glossary:**
 | Term | Meaning |
 |------|---------|
-| Face card | Jerga de redes: tener una cara que "pasa" sin maquillaje ni filtros. |
+| Face card | Jerga de redes: una cara que "pasa" sin maquillaje ni filtros. |
 | De-puff | Deshinchar el rostro (Fase 1). |
-| Gua sha | Técnica de masaje con piedra plana (jade) para drenaje y masaje facial. |
-| Lymphatic drainage | Drenaje linfático: mover el líquido de la cara hacia las clavículas. |
-| Face yoga | Ejercicios de los músculos faciales (Fase 2). |
-| Mewing | Postura de reposo con toda la lengua apoyada en el paladar. |
-| The 48-hour rule | Empezar el protocolo 48 h antes de un evento. |
-| AM / PM routine | Rutina de skincare de mañana y de noche (10 min cada una). |
-| Bakuchiol | Alternativa vegetal y suave al retinol. |
-| New face era | Cierre del plan de 30 días; tono aspiracional. |
+| Gua sha | Masaje con piedra plana para drenaje facial. |
+| Mewing | Postura de reposo con toda la lengua en el paladar. |
+| The 48-hour rule | Empezar dieta y gua sha 48 h antes de un evento. |
+| Retinol night / Rest night | Noches con retinol y noches de descanso. |
+| #FaceCardProtocol | Hashtag para compartir resultados. |
 
 ## Brand Voice
-**Tone:** Casual, directo, cercano, con jerga de internet ("fr", "no cap", "lowkey", "Not joking", "No BS"). Habla como una amiga que ya lo probó.
-**Style:** Frases cortas, titulares contundentes en mayúsculas, números concretos (6 pasos, 7 minutos, 20 min, 30 días), listas y checklists. Mezcla "ciencia explicada" con tono de redes.
-**Personality:** Segura, honesta ("unretouched"), práctica, aspiracional, editorial.
-**Identidad visual:** Paleta verde oliva/salvia, gris carbón, terracota/melocotón (Fase 3) y blanco; tipografía serif editorial (Playfair) con sans de apoyo; ilustraciones de línea; marcos verdes en fotos.
+**Tone:** Casual, directo, cercano, con jerga de internet ("fr", "no cap", "lowkey", "Not joking"). Ahora además honesto y responsable: dice lo que funciona y lo que no.
+**Style:** Titulares cortos en mayúsculas, números concretos, listas y checklists, cajas de aviso en rojo, explicaciones con fuente.
+**Personality:** Segura, honesta, práctica, aspiracional, editorial.
+**Identidad visual:** Verde oliva/salvia, gris carbón, terracota/melocotón (Fase 3), blanco; Playfair + sans; ilustraciones de línea.
+**Sobre V:** persona digital con imágenes IA. Se puede usar como cara de la marca siempre que no se presente como mujer real ni sus imágenes como resultados reales.
 
 ## Proof Points
-**Metrics (del ebook):**
-- Antes/después de la autora: Día 0 vs. Día 21.
-- "+50 muscles" en la cara.
-- Sodio: 1.500 mg objetivo ideal AHA, 2.300 mg límite diario, 3.400 mg ingesta media real.
-- Estudio citado: "A 20-week study showed that women who did face yoga consistently looked up to 2 years younger."
-**Customers:** Ninguno todavía. **[Pendiente]** reunir testimonios de lectoras.
-**Testimonials:**
-> "I genuinely thought my face was just... genetics. That it would always look like this. 21 days proved me completely wrong." — V (Valeria Saint), autora
+**Metrics (con fuente en el ebook):**
+- Estudio de Northwestern (JAMA Dermatology, 2018): mujeres de mediana edad con ejercicios faciales diarios durante 20 semanas parecían ~3 años más jóvenes. Estudio pequeño (16 empezaron, 11 terminaron).
+- Bakuchiol vs. retinol (British Journal of Dermatology, 2019): resultados similares con menos irritación en 12 semanas.
+- Sodio (AHA): ideal 1.500 mg, límite 2.300 mg, media real en EE. UU. ~3.400 mg.
+- Sueño (CDC): adultos, 7 horas o más.
+**Customers:** Ninguna todavía. **[Pendiente]** conseguir lectoras beta y sus fotos reales (con permiso).
+**Testimonials:** Ninguno real todavía. No usar a V como testimonio.
 **Value themes:**
 | Theme | Proof |
 |-------|-------|
-| Es un sistema, no consejos sueltos | 3 fases + plan de 30 días con checklist |
-| Cabe en tu día | 20 min/día; gua sha 7 min; AM y PM 10 min |
-| Resultados visibles en la autora | Fotos Día 0 / Día 21 sin retoque |
-| Sin procedimientos caros | Herramienta gua sha + rutina básica; opciones accesibles |
+| Es un sistema | 3 fases + plan + tracker día por día |
+| Cabe en tu día | ~20 min/día; gua sha 7 min; PM 5 min |
+| Es seguro y honesto | Página "Read this first", reglas del retinol, 9 fuentes |
+| Sin procedimientos caros | Kit mínimo y lista de compras |
 
-**Afirmaciones que necesitan respaldo antes de usarlas en anuncios:**
-- El estudio de face yoga (probablemente Northwestern University, JAMA Dermatology 2018): fue un estudio pequeño, sin grupo control, y midió mejillas y edad aparente, no la mandíbula. No decir "measurably better jawline".
-- Mewing: "literally reshapes your jaw" y "can improve jaw structure" no tienen respaldo sólido en adultos. Presentarlo como hábito de postura.
-- "Dermatologist-approved" y "skincare backed by actual clinical evidence": no hay bibliografía en el ebook. Añadir fuentes o suavizar.
-- "Hyaluronic acid holds 1000x its weight in water": frase de marketing habitual, evitar como dato.
-- El antes/después es un caso individual; en anuncios acompañar con "results vary" / "los resultados pueden variar". Meta y TikTok restringen los antes/después en belleza.
+**Reglas para anuncios:**
+- No usar las imágenes de V como antes/después. Meta, TikTok y Hotmart restringen los antes/después y una IA presentada como resultado es engañosa.
+- Siempre "results vary" / "los resultados varían".
+- Las cifras de estudios, citadas tal como están en el ebook.
 
 ## Goals
-**Business goal:** Validar el producto en Hotmart en el rango US$7,99–9,99 y lanzar versión en español (Hotmart tiene mucho público hispanohablante en Latinoamérica).
-**Conversion action:** Compra del ebook en **Hotmart** desde TikTok/Instagram (link en bio → página de venta → checkout de Hotmart). Hotmart permite garantía de reembolso (mínimo 7 días), order bumps, upsells y programa de afiliadas.
-**Current metrics:** [Pendiente] Sin datos de ventas aún.
+**Business goal:** Validar el producto en Hotmart y lanzar la versión en español.
+**Conversion action:** Compra en Hotmart desde TikTok/Instagram. Hotmart permite garantía (mínimo 7 días), order bumps, upsells y afiliadas.
+**Current metrics:** [Pendiente] Sin ventas aún.
 
-## Notas de producto (para la siguiente edición del ebook)
-**Errores que corregir:**
-- Anuncia "the 12 essential exercises" de face yoga, pero solo muestra 5.
-- El encabezado de Phase Two repite el subtítulo de Phase One.
-- Errata en el plan: "irst retinol" → "First retinol".
-- Las fases (semanas 1–2, 2–3, 3–4) no coinciden con los 4 bloques del plan (días 1–7, 8–14, 15–21, 22–30).
-- "3.400 Mg" → "3.400 mg"; la barra de sodio confunde "ideal goal" y "daily limit".
-- La página de la rutina PM queda casi vacía.
+## Notas de producto (edición 2)
+**Resuelto en la edición 2:** fases y plan alineados, Fase 2 reescrita, erratas, aviso de seguridad, reglas del retinol, frío/agua/sueño, tipos de piel, tracker, lista de compras, guía de fotos, FAQ, cierre, fuentes y disclaimer.
 
-**Contenido prometido que no está desarrollado:**
-- "Cold therapy and lymphatic drainage at home" aparece en el índice y en el plan ("Daily cold therapy"), pero no tiene página.
-- "Lemon water first thing in the morning" aparece en el plan sin explicación.
-- El mal sueño se nombra como causa de hinchazón, pero no hay consejos de sueño.
-
-**Seguridad (falta y es importante):**
-- Aviso legal: no sustituye consejo médico; los resultados varían.
-- Retinol: no usar en embarazo ni lactancia (alternativa: bakuchiol); prueba de parche; introducción gradual; posible irritación.
-- Gua sha: no sobre acné activo, heridas o rosácea inflamada.
-- Mewing y ejercicios de mandíbula: parar si hay dolor de mandíbula (ATM).
-- Página de fuentes para el estudio de face yoga, la AHA y los ingredientes.
-
-**Para subir el valor percibido:**
-- Plan día por día (30 días) en lugar de bloques semanales, con tracker imprimible.
-- Guía para hacer la foto de antes y después (misma luz, ángulo, hora y expresión).
-- Rutinas por tipo de piel (grasa, seca, sensible, con acné).
-- Preguntas frecuentes ("¿y si me salto un día?", "no veo cambios").
-- Página final: bio de la autora, próximos pasos y hashtag propio para "Share your transformation".
-- Versión en español, adaptando la jerga ("fr", "no cap", "lowkey").
-- Bonos para Hotmart: tracker imprimible, vídeo del gua sha, versión en español, lista de compras.
+**Pendiente:**
+- Faltan números de página, y el ebook remite a páginas (p. 13, 14, 19).
+- La página 4 muestra un antes/después IA con distinta luz, ángulo y ropa: justo lo que la página 19 dice que falsea los resultados.
+- La lista de compras deja el SPF para el día 8, pero la FAQ lo incluye en el kit mínimo y el tracker marca AM/PM desde el día 1.
+- Prueba de parche: "2–3 days" (p. 3) vs. "3 nights" (p. 13).
+- "20 min a day": en la Fase 2 suma ~25 (AM 10 + face yoga 10 + PM 5).
+- Versión en español.
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v3 (2026-10-15) — Actualizado a la edición 2 del ebook (22 páginas). V pasa a ser persona digital con imágenes IA: se elimina el testimonio y el antes/después como prueba, se añaden reglas para anuncios, fuentes reales como prueba y la seguridad como diferenciador.
 - v2 (2026-10-14) — Público confirmado: mujeres. Plataforma de venta confirmada: Hotmart. Ampliadas las notas de mejora del ebook.
 - v1 (2026-10-14) — Initial context, extraída del ebook The Face Card Protocol (PDF) y del análisis estratégico.
