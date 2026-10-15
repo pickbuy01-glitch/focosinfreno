@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v3
+**Document version:** v4
 **Last updated:** 2026-10-15
 
 > Fuente: el ebook *The Face Card Protocol*, edición 2 (PDF, 22 páginas, "Digital Edition 2026"), más el análisis estratégico inicial. Las citas entre comillas son textuales del ebook. Lo marcado como **[Hipótesis]** o **[Pendiente]** no sale del ebook y hay que validarlo.
@@ -12,7 +12,7 @@
 **Product type:** Producto digital informativo (ebook PDF), venta directa en Hotmart.
 **Business model:** Pago único.
 - Precio recomendado: **US$9,99**. Promo de lanzamiento: **US$7,99**.
-- Con los bonos de la edición 2 (tracker, lista de compras, guía de fotos, FAQ) se puede probar **US$12,99–14,99**. **[Hipótesis]** validar con conversiones.
+- Con los 3 bonos separados (tracker, lista de compras, guía de fotos) se puede probar **US$12,99–14,99**. **[Hipótesis]** validar con conversiones.
 
 **Ficha del ebook:**
 - **Título:** The Face Card Protocol
@@ -169,19 +169,15 @@ B2C. Una persona principal: mujer de 18–35 años **[Hipótesis de edad]** que 
 **Conversion action:** Compra en Hotmart desde TikTok/Instagram. Hotmart permite garantía (mínimo 7 días), order bumps, upsells y afiliadas.
 **Current metrics:** [Pendiente] Sin ventas aún.
 
-## Notas de producto (edición 2)
-**Resuelto en la edición 2:** fases y plan alineados, Fase 2 reescrita, erratas, aviso de seguridad, reglas del retinol, frío/agua/sueño, tipos de piel, tracker, lista de compras, guía de fotos, FAQ, cierre, fuentes y disclaimer.
-
-**Pendiente:**
-- Faltan números de página, y el ebook remite a páginas (p. 13, 14, 19).
-- La página 4 muestra un antes/después IA con distinta luz, ángulo y ropa: justo lo que la página 19 dice que falsea los resultados.
-- La lista de compras deja el SPF para el día 8, pero la FAQ lo incluye en el kit mínimo y el tracker marca AM/PM desde el día 1.
-- Prueba de parche: "2–3 days" (p. 3) vs. "3 nights" (p. 13).
-- "20 min a day": en la Fase 2 suma ~25 (AM 10 + face yoga 10 + PM 5).
-- Versión en español.
+## Notas de producto (edición final)
+**Estado:** listo para vender. Ebook de 18 páginas numeradas + 3 bonos en archivos separados: **30-Day Tracker**, **Shopping List** y **Progress Photo Guide**.
+- Sin antes/después. V aparece solo en la portada (IA, declarado). La página 4 tiene ahora una línea de tiempo honesta: días (hinchazón), semanas (tono y postura), meses (piel), nunca (estructura ósea).
+- Plan y textos alineados: 20–25 min al día, prueba de parche de 3 días, rutina básica con SPF desde el día 1.
+- Pendiente: versión en español.
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v4 (2026-10-15) — Ebook final: 18 páginas + 3 bonos separados (tracker, lista de compras, guía de fotos); pendientes de la edición 2 resueltos.
 - v3 (2026-10-15) — Actualizado a la edición 2 del ebook (22 páginas). V pasa a ser persona digital con imágenes IA: se elimina el testimonio y el antes/después como prueba, se añaden reglas para anuncios, fuentes reales como prueba y la seguridad como diferenciador.
 - v2 (2026-10-14) — Público confirmado: mujeres. Plataforma de venta confirmada: Hotmart. Ampliadas las notas de mejora del ebook.
 - v1 (2026-10-14) — Initial context, extraída del ebook The Face Card Protocol (PDF) y del análisis estratégico.
